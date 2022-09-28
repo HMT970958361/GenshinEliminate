@@ -1,0 +1,118 @@
+
+/* 字体 */
+@font-face {
+  font-family: hyfblxjt;
+  src: url('/font/汉仪风波龙行简体.ttf');
+}
+@font-face {
+  font-family: genshin;
+  src: url('/font/zh-cn.ttf');
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  font-weight: bold !important;
+  font-size: 44px;
+  line-height: 56px;
+}
+h2 {
+  font-weight: bold !important;
+  font-size: 34px;
+  line-height: 42px;
+}
+h3 {
+  font-weight: bold !important;
+  font-size: 24px;
+  line-height: 36px;
+}
+h4 {
+  font-size: 24px;
+  line-height: 36px;
+}
+h5 {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: bold !important;
+}
+/* 常用浮动布局 */
+.flex-vertical {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: start;
+}
+.flex-between {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-start{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+.flex-center{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.grid-col3{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* place-items:center; */
+  /* place-content:center; */
+}
+/* 禁止选中文字 */
+.select-disable {
+  -moz-user-select: none; /*火狐*/
+  -webkit-user-select: none; /*webkit浏览器*/
+  -ms-user-select: none; /*IE10*/
+  -khtml-user-select: none; /*早期浏览器*/
+  user-select: none;
+}
+/* input去除样式 */
+.input-white input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-transition-delay: 99999s;
+  -webkit-transition: color 99999s ease-out, background-color 99999s ease-out;
+  transition: color 99999s ease-out, background-color 99999s ease-out;
+  transition-delay: 99999s;
+}
+.input-white input::-webkit-input-placeholder {
+  color: var(--gray);
+}
+
+/* 滚动条样式 */
+.scrollnarrow::-webkit-scrollbar {
+  width: 2px;
+  height: 1px;
+}
+.scrollnarrow::-webkit-scrollbar-thumb {
+  /* border-radius: 1px; */
+  background-color: var(--monochrome75);
+}
+.scrollnarrow::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2px var(--monochrome50);
+  background: var(--monochrome50);
+  /* border-radius: 1px; */
+}
+/* iconfont 基本样式 */
+.iconfont {
+  font-size: 14px;
+  margin: 0 4px;
+}
+/* 单行省略 */
+.ellipsis{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; 
+  -webkit-box-orient: vertical;
+}
+
